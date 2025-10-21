@@ -1,13 +1,12 @@
-import './App.css';
-import Card from './Component/Card/Card';
-function App() {
-  
+import React from 'react';
+import Products from './Component/Products/Products';
 
+function App() {
   return (
-   <div className="App">
-    <Card/>
-   </div>
-  )
+    <div>
+       < Products/>
+    </div>
+  );
 }
 
-export default App
+export default App;
