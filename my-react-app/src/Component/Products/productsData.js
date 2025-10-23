@@ -10,7 +10,6 @@ import Mast from '../Images/Mast.jpg'
 import Mack_Jonny from '../Images/Mack_Jonny.jpg'
 import Lux_Cozi from '../Images/Lux_Cozi.jpg'
 import Puma from '../Images/Puma.jpg'
-// import Max from '../Images/Max.jpg'
 const products = [
     {
       id: 1,
