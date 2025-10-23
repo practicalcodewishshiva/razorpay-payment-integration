@@ -1,16 +1,18 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
+import React from "react";
+import { Routes,Route } from 'react-router-dom'
+import Header from "./Component/Header";
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
+<<<<<<< Updated upstream
     <>
      
     </>
+=======
+    <Routes>
+      <Route path="/" element={<Header/>} />
+    </Routes>
+>>>>>>> Stashed changes
   )
 }
 
-export default App
+export default App;
