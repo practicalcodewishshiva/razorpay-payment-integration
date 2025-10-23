@@ -1,8 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet');
-
+@import "tailwindcss";
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins",serif;
+}
+*{
+    box-sizing: border-box;
+}
+body
+{
+    background-color: #fff;
+    color:#111;
+    /* box-sizing: border-box; */
+    margin:0;   
+}
+h1
+{
+    text-align: center;
+    color: #111;
+    font-size: 2rem;
 }
