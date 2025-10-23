@@ -17,7 +17,7 @@ const [currentImageIndex, setCurrentImageIndex] = useState({});
         {products.map(product => (
           <div 
             key={product.id}
-            className="product-card">
+            className="product-card" sm={12} md={6} lg={3}>
             <div className="product-image-container">
               <div className="image-slider">
                 {product.images.map((image, index) => (
