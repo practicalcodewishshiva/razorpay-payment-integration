@@ -1,40 +1,27 @@
 import React from "react";
-import { IoMenuOutline } from "react-icons/io5";
-import { useState } from "react";
-import { Button, Drawer, Radio, Space } from "antd";
+import Accordion from "@mui/material/Accordion";
+import AccordionActions from "@mui/material/AccordionActions";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import Button from "@mui/material/Button";
+import Categories from "../Categories/Categories";
+import Brand from "../Brands/Brand";
+import RangeSlider from "../RangeSlider/RangeSlider";
+import ColorsSection from "../colorsection/ColorSection";
+import DiscountRange from "../Discount/DiscountRange";
 
-export default function Sidebar() {
-  const [open, setOpen] = useState(false);
-  const [placement, setPlacement] = useState("left");
-  const showDrawer = () => {
-    setOpen(true);
-  };
-  const onClose = () => {
-    setOpen(false);
-  };
-  const onChange = (e) => {
-    setPlacement(e.target.value);
-  };
+const Sidebar = () => {
   return (
-    <>
-      <Space>
-        <Radio.Group value={placement} onChange={onChange}></Radio.Group>
-        <Button type="#f759ab" onClick={showDrawer}>
-          <IoMenuOutline />
-        </Button>
-      </Space>
-      <Drawer
-        title="Basic Drawer"
-        placement={placement}
-        closable={false}
-        onClose={onClose}
-        open={open}
-        key={placement}
-      >
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-      </Drawer>
-    </>
+    <div className="min-h-screen bg-white border-r border-[#edebef] w-[280px] mt-15">
+      <Categories />
+      <Brand />
+      <RangeSlider />
+      <ColorsSection />
+      <DiscountRange />
+    </div>
   );
-}
+};
+
+export default Sidebar;
