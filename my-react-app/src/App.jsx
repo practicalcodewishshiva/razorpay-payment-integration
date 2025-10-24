@@ -1,55 +1,54 @@
-import React from 'react'
-import { Routes } from 'react-router-dom'
-import Men from './Pages/Men'
-import { Route, useLocation } from "react-router-dom";
-import Navbar from './Components/Navbar'
-import Home from './Pages/Home'
-import Kids from './Pages/Kids';
-import Women from './Pages/women';
-import { CiRouter } from 'react-icons/ci';
+import { useLocation, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar/Navbar";
 
-// You will need to create these components as well.
-// import Contact from './Pages/Contact' 
-// import NotFound from './Pages/NotFound'
+import Men from "./components/Men/Men";
+import Women from "./components/Women/Women";
+import Kids from "./components/Kids/Kids";
 
+function App() {
+  const location = useLocation();
+  const showNavbar = location.pathname !== "/";
 
-
-
-
-const App = () => {
-   const location = useLocation();
- 
-  
-   const Contact = () => <h1>Contact Page</h1>;
-   const NotFound = () => <h1>404 - Not Found</h1>;
-
+  const handleLogout = () => {
+    localStorage.removeItem("access_token");
+  };
 
   return (
     <>
-    
-     {location.pathname === "/" ? <Navbar/> : <Navbar /> }
-    
-
+      {showNavbar && <Navbar onLogout={handleLogout} />}
 
       <Routes>
-      <Route path="/Women" element={<Women />} />
-        <Route path="/" element={<Home />} />
-        <Route path="/Men" element={<Men />} />
-        
-       
-        <Route path="*" element={<NotFound />} />
-        <Route path="/Kids" element={<Kids />} />
+        {/* Public route */}
+        <Route path="/" element={<Navbar/>} />
 
+        {/* Protected routes */}
+        <Route
+          path="/men"
+          element={
         
+              <Men />
+          
+          }
+        />
+        <Route
+          path="/women"
+          element={
+            
+              <Women />
+            
+          }
+        />
+        <Route
+          path="/kids"
+          element={
+            
+              <Kids />
+            
+          }
+        />
       </Routes>
-
-
-
-   
-
-      
     </>
-  )
+  );
 }
 
-export default App
+export default App;

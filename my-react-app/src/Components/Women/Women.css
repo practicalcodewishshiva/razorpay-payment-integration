@@ -1,0 +1,48 @@
+.dropdown-menu {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+  background-color: #fff;
+  padding: 25px 40px;
+  width: 1000px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-top: 1px solid #eee;
+}
+
+.dropdown-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dropdown-column h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #f2809c; /* Myntra pink heading */
+  margin-bottom: 6px;
+}
+
+.dropdown-column h5 {
+  font-size: 13px;
+  color: #f2809c;
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+.dropdown-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-column ul li {
+  font-size: 13px;
+  color: #282c3f;
+  line-height: 1.8;
+  cursor: pointer;
+}
+
+.dropdown-column ul li:hover {
+  color: #f2809c;
+  text-decoration: underline;
+}
