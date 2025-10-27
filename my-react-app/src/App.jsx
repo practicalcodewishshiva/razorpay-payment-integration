@@ -1,20 +1,12 @@
-import React from "react";
-import "./App.css";
-import Sidebar from "./Components/Sidebar/Sidebar";
-
-import Products from "./Component/Products/Products";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import "./App.css";
-import Login from "./Components/Login/Login";
-import MainPage from "./Components/MainPage/MainPage";
-
-import Men from "./Pages/Men";
-import { useLocation } from "react-router-dom";
-import Navbar from "./Components/Navbar";
-import Home from "./Pages/Home";
-import Kids from "./Pages/Kids";
-import Women from "./Pages/women";
-import { CiRouter } from "react-icons/ci";
+import React from 'react'
+import { Routes } from 'react-router-dom'
+import Men from './Pages/Men'
+import { Route, useLocation } from "react-router-dom";
+import Navbar from './Components/Navbar'
+import Home from './Pages/Home'
+import Kids from './Pages/Kids';
+import Women from './Pages/women';
+import { CiRouter } from 'react-icons/ci';
 
 // You will need to create these components as well.
 // import Contact from './Pages/Contact'
@@ -25,6 +17,7 @@ const App = () => {
 
   const Contact = () => <h1>Contact Page</h1>;
   const NotFound = () => <h1>404 - Not Found</h1>;
+
 
   return (
     <>
@@ -44,7 +37,7 @@ const App = () => {
         <Route path="/Products" element={<Products />} />
       </Routes>
     </>
-  );
-};
+  )
+}
 
-export default App;
+export default App
