@@ -1,3 +1,6 @@
+import "./App.css";
+import Sidebar from "./Components/Sidebar/Sidebar";
+
 import React from 'react'
 import { Routes } from 'react-router-dom'
 import Men from './Pages/Men'
@@ -32,11 +35,11 @@ const App = () => {
 
 
       <Routes>
+
       <Route path="/Women" element={<Women />} />
         <Route path="/" element={<Home />} />
         <Route path="/Men" element={<Men />} />
-        
-       
+        <Route path="/sidebar" element={<Sidebar/>} />
         <Route path="*" element={<NotFound />} />
         <Route path="/Kids" element={<Kids />} />
 
@@ -49,7 +52,7 @@ const App = () => {
 
       
     </>
-  )
+  );
 }
 
-export default App
+export default App;
