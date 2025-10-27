@@ -2,6 +2,7 @@ import "./App.css";
 import Sidebar from "./Components/Sidebar/Sidebar";
 
 import React from 'react'
+import Products from './Component/Products/Products';
 import { Routes } from 'react-router-dom'
 import Men from './Pages/Men'
 import { Route, useLocation } from "react-router-dom";
@@ -42,6 +43,7 @@ const App = () => {
         <Route path="/sidebar" element={<Sidebar/>} />
         <Route path="*" element={<NotFound />} />
         <Route path="/Kids" element={<Kids />} />
+        <Route path="/Products" element={<Products/>}/>
 
         
       </Routes>
