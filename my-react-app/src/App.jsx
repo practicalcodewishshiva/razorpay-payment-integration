@@ -1,16 +1,5 @@
-import React from 'react'
-import { Routes } from 'react-router-dom'
-import Men from './Pages/Men'
-import { Route, useLocation } from "react-router-dom";
-import Navbar from './Components/Navbar'
-import Home from './Pages/Home'
-import Kids from './Pages/Kids';
-import Women from './Pages/women';
-import Login from './Components/Login/Login';
-import MainPage from './Components/MainPage/MainPage';
-import Sidebar from './Components/Sidebar/Sidebar';
-// import Products from './Components/'
-import { CiRouter } from 'react-icons/ci';
+import { useLocation, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar/Navbar";
 
 // You will need to create these components as well.
 // import Contact from './Pages/Contact'
@@ -22,9 +11,9 @@ const App = () => {
   const Contact = () => <h1>Contact Page</h1>;
   const NotFound = () => <h1>404 - Not Found</h1>;
 
-
   return (
     <>
+      {showNavbar && <Navbar onLogout={handleLogout} />}
       {location.pathname === "/" ? <Navbar /> : <Navbar />}
 
       <Routes>
@@ -38,10 +27,13 @@ const App = () => {
 
         <Route path="*" element={<NotFound />} />
         <Route path="/Kids" element={<Kids />} />
-        {/* <Route path="/Products" element={<Products />} /> */}
+        <Route path="/Products" element={<Products />} />
+        <Route path="/men" element={<Men />} />
+        <Route path="/women" element={<Women />} />
+        <Route path="/kids" element={<Kids />} />
       </Routes>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
