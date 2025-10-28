@@ -1,6 +1,12 @@
 import { useLocation, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
-
+import Login from './Components/Login/Login';
+import MainPage from './Components/MainPage/MainPage';
+import Women from "./components/Women/Women";
+import Men from "./components/Men/Men";
+import Sidebar from './Components/Sidebar/Sidebar';
+import Kids from "./components/Kids/Kids";
+import Products from "./Components/Products/Products";
 // You will need to create these components as well.
 // import Contact from './Pages/Contact'
 // import NotFound from './Pages/NotFound'
@@ -13,7 +19,7 @@ const App = () => {
 
   return (
     <>
-      {showNavbar && <Navbar onLogout={handleLogout} />}
+      {/* {showNavbar && <Navbar onLogout={handleLogout} />} */}
       {location.pathname === "/" ? <Navbar /> : <Navbar />}
 
       <Routes>
@@ -21,7 +27,7 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/mainpage" element={<MainPage />} />
         <Route path="/Women" element={<Women />} />
-        <Route path="/" element={<Home />} />
+        {/* <Route path="/" element={<Home />} /> */}
         <Route path="/Men" element={<Men />} />
         <Route path="/sidebar" element={<Sidebar />} />
 

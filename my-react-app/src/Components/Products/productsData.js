@@ -1,15 +1,19 @@
-import Adidas from '../Images/Adidas.jpg'
-import BearHouse from '../Images/BearHouse.jpg'
-import Glitchez from '../Images/Glitchez.jpg'
-import Max from '../Images/Max.jpg'
-import Allen_Solly from '../Images/Allen Solly.jpg'
-import Louis_Philippe from '../Images/Louis Philippe.jpg'
-import Zara from '../Images/zara.jpg'
-import Levis from '../Images/Levis.jpg'
-import Mast from '../Images/Mast.jpg'
-import Mack_Jonny from '../Images/Mack_Jonny.jpg'
-import Lux_Cozi from '../Images/Lux_Cozi.jpg'
-import Puma from '../Images/Puma.jpg'
+
+import Adidas from '../../assets/Images/Adidas.jpg'
+import BearHouse from '../../assets/Images/BearHouse.jpg'
+import Glitchez from '../../assets/Images/Glitchez.jpg'
+import Max from '../../assets/Images/Max.jpg'
+import Allen_Solly from '../../assets/Images/Allen Solly.jpg'
+import Louis_Philippe from '../../assets/Images/Louis Philippe.jpg'
+import Zara from '../../assets/Images/zara.jpg'
+import Levis from '../../assets/Images/Levis.jpg'
+import Mast from '../../assets/Images/Mast.jpg'
+import Mack_Jonny from '../../assets/Images/Mack_Jonny.jpg'
+import Lux_Cozi from '../../assets/Images/Lux_Cozi.jpg'
+import Puma from '../../assets/Images/Puma.jpg'
+
+
+
 const products = [
     {
       id: 1,
