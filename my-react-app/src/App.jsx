@@ -6,6 +6,10 @@ import Navbar from './Components/Navbar'
 import Home from './Pages/Home'
 import Kids from './Pages/Kids';
 import Women from './Pages/women';
+import Login from './Components/Login/Login';
+import MainPage from './Components/MainPage/MainPage';
+import Sidebar from './Components/Sidebar/Sidebar';
+// import Products from './Components/'
 import { CiRouter } from 'react-icons/ci';
 
 // You will need to create these components as well.
@@ -34,7 +38,7 @@ const App = () => {
 
         <Route path="*" element={<NotFound />} />
         <Route path="/Kids" element={<Kids />} />
-        <Route path="/Products" element={<Products />} />
+        {/* <Route path="/Products" element={<Products />} /> */}
       </Routes>
     </>
   )
