@@ -1,7 +1,7 @@
 import React from "react";
 import "./Kids.css";
 
-const Kids = () => {
+const Kids = ({isOpened}) => {
   return (
     <div className="dropdown-menu">
       {/* Column 1 */}

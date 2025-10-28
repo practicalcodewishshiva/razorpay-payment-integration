@@ -1,10 +1,10 @@
 import { useLocation, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
-import Login from './Components/Login/Login';
-import MainPage from './Components/MainPage/MainPage';
+import Login from "./Components/Login/Login";
+import MainPage from "./Components/MainPage/MainPage";
 import Women from "./components/Women/Women";
 import Men from "./components/Men/Men";
-import Sidebar from './Components/Sidebar/Sidebar';
+import Sidebar from "./Components/Sidebar/Sidebar";
 import Kids from "./components/Kids/Kids";
 import Products from "./Components/Products/Products";
 // You will need to create these components as well.

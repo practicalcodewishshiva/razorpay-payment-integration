@@ -1,7 +1,7 @@
 import React from "react";
 import "./Women.css";
 
-const Women = () => {
+const Women = ({isOpened}) => {
   return (
     <div className="dropdown-menu">
       
