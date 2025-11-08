@@ -15,7 +15,7 @@ function Login() {
   }
   function HandleButton() {
 
-    if (num==="6304441992") {
+    if (num==="test") {
       navigate("/MainPage");
     } else {
       alert("invalid number");
