@@ -45,6 +45,19 @@ const Navbar = ({ onLogout }) => {
         <li className="nav-item" onMouseEnter={() => handleMouseEnter("kids")}>
           <Link to="/kids">Kids</Link>
         </li>
+         <li className="nav-item" onMouseEnter={() => handleMouseEnter("kids")}>
+          <Link to="/kids">Home</Link>
+        </li>
+
+         <li className="nav-item" onMouseEnter={() => handleMouseEnter("kids")}>
+          <Link to="/kids">Beauty</Link>
+        </li>
+         <li className="nav-item" onMouseEnter={() => handleMouseEnter("kids")}>
+          <Link to="/kids">Genz</Link>
+        </li>
+         <li className="nav-item" onMouseEnter={() => handleMouseEnter("kids")}>
+          <Link to="/kids">Studio</Link>
+        </li>
       </ul>
 
       <div className={`dropdown-wrapper ${activeDropdown ? "show" : ""}`}>

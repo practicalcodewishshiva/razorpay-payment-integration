@@ -16,8 +16,9 @@ const Products = () => {
     setCurrentImageIndex(initialIndexes);
   }, []);
 
-  function navigateToCart() {
-    navigate("/cartPage");
+
+  function navigateToCart(){
+    navigate('/cartPage')
   }
   return (
     <>

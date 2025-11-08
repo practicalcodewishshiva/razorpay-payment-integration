@@ -16,7 +16,7 @@ function Login() {
   function HandleButton() {
 
     if (num==="test") {
-      navigate("/MainPage");
+      navigate("/Products");
     } else {
       alert("invalid number");
     }
