@@ -8,6 +8,7 @@ import Sidebar from "./Components/Sidebar/Sidebar";
 import Kids from "./components/Kids/Kids";
 import Products from "./Components/Products/Products";
 import CartPage from "./Components/CartPage/CartPage";
+import Payments from "./Pages/Payments";
 
 // You will need to create these components as well.
 // import Contact from './Pages/Contact'
@@ -18,11 +19,11 @@ const App = () => {
 
   const Contact = () => <h1>Contact Page</h1>;
   const NotFound = () => <h1>404 - Not Found</h1>;
-
+ 
   return (
     <>
       {/* {showNavbar && <Navbar onLogout={handleLogout} />} */}
-      {location.pathname === "/" ? <Navbar /> : <Navbar />}
+      {/* {location.pathname === "/" ? <Navbar /> : <Navbar />} */}
 
       <Routes>
         <Route path="/" element={<Login />} />
@@ -37,6 +38,8 @@ const App = () => {
         <Route path="/women" element={<Women />} />
         <Route path="/kids" element={<Kids />} />
         <Route path="/cartPage" element={<CartPage />} />
+        <Route path="/payments" element={<Payments />} />
+
       </Routes>
     </>
   );

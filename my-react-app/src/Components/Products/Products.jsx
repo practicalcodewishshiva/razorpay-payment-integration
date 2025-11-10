@@ -3,6 +3,7 @@ import "./Products.css";
 import products from "./productsData.js";
 import Sidebar from "../Sidebar/Sidebar.jsx";
 import { useNavigate } from "react-router-dom";
+import Navbar from "../Navbar/Navbar.jsx";
 
 const Products = () => {
   const navigate = useNavigate();
@@ -22,6 +23,7 @@ const Products = () => {
   }
   return (
     <>
+       <Navbar />
       <div style={{ display: "flex" }}>
         <Sidebar />
         <div className="myntra-slider-container" onClick={navigateToCart}>
