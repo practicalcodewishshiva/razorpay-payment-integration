@@ -18,6 +18,7 @@ const Products = () => {
 
 
   const navigateToCart = (product) => {
+    
     navigate('/cartPage',{
       state : {product :product}
     })
@@ -28,10 +29,12 @@ const Products = () => {
         <Sidebar />
         <div className="myntra-slider-container" >
           <div className="products-grid">
+
             {products.map((product) => (
               <div key={product.id} className="product-card" onClick={() => navigateToCart(product)}>
                 <div className="product-image-container">
                   <div className="image-slider">
+
                     {product.images.map((image, index) => (
                       <img
                         key={index}

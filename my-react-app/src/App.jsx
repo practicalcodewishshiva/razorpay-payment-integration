@@ -5,7 +5,7 @@ import MainPage from "./Components/MainPage/MainPage";
 import Women from "./components/Women/Women";
 import Men from "./components/Men/Men";
 import Sidebar from "./Components/Sidebar/Sidebar";
-import Kids from "./components/Kids/Kids";
+
 import Products from "./Components/Products/Products";
 import CartPage from "./Components/CartPage/CartPage";
 
