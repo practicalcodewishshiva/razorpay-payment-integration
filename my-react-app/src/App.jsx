@@ -1,11 +1,11 @@
 import { useLocation, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar/Navbar";
+import Navbar from "./Components/Navbar/Navbar";
 import Login from "./Components/Login/Login";
 import MainPage from "./Components/MainPage/MainPage";
-import Women from "./components/Women/Women";
-import Men from "./components/Men/Men";
+import Women from "./Components/Women/Women";
+import Men from "./Components/Men/Men";
 import Sidebar from "./Components/Sidebar/Sidebar";
-
+import Kids from "./Components/Kids/Kids";
 import Products from "./Components/Products/Products";
 import CartPage from "./Components/CartPage/CartPage";
 
