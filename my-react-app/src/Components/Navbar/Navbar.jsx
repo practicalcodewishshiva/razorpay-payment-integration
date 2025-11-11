@@ -1,14 +1,30 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Men from "../Men/Men";
 import Women from "../Women/Women";
 import Kids from "../Kids/Kids";
 import "./Navbar.css";
+import useSelection from "antd/es/table/hooks/useSelection";
+import { useDispatch, useSelector } from "react-redux";
 
 const Navbar = ({ onLogout }) => {
   const [activeDropdown, setActiveDropdown] = useState(false);
 
   const [open, setOpen] = useState(false);
+
+
+   const {totalQuantity} = useSelector(state => state.allCart);
+  
+
+  // const { totalQuantity} = useSelector(state => state.allCart)
+
+  const dispatch = useDispatch()
+
+
+  
+
+  
+  const [searchQuery, setSearchQuery] = useState("");
 
   const handleMouseEnter = (menu) => {
     setActiveDropdown(menu);
@@ -28,6 +44,14 @@ const Navbar = ({ onLogout }) => {
     navigate("/men");
     handleMouseLeave();
   }
+
+  const handleSearch = (e) => {
+    if (e.key === 'Enter') {
+      // Handle search functionality here
+      console.log("Searching for:", searchQuery);
+      // You can navigate to search results page or filter products
+    }
+  };
 
   return (
     <nav className="navbar" onMouseLeave={handleMouseLeave}>
@@ -60,11 +84,39 @@ const Navbar = ({ onLogout }) => {
         </li>
       </ul>
 
+       <div className="search-container">
+          <div className="search-bar">
+            <span className="search-icon">🔍</span>
+            <input
+              type="text"
+              placeholder="Search for products, brands and more"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              onKeyPress={handleSearch}
+              className="search-input"
+            />
+          </div>
+        </div>
+
+        {/* User Actions */}
+        <div className="user-actions">
+          <div className="action-item">
+            <Link to="/profile">Profile</Link>
+          </div>
+          <div className="action-item">
+            <Link to="/wishlist">Wishlist</Link>
+          </div>
+          <div className="action-item">
+            <Link to="/bag">Bag ({totalQuantity}) </Link>
+          </div>
+        </div>
+
       <div className={`dropdown-wrapper ${activeDropdown ? "show" : ""}`}>
         {activeDropdown === "men" && <Men isOpened={open} />}
         {activeDropdown === "women" && <Women isOpened={open} />}
         {activeDropdown === "kids" && <Kids isOpened={open} />}
       </div>
+      
     </nav>
   );
 };

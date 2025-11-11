@@ -32,9 +32,7 @@ setCheckBox(true)
   return (
     <>
       <div className="main-container">
-        <div className="navabar">
-          <h1>NavBar</h1>
-        </div>
+        
         <div className='main-login'>
           <div className="Login-bar">
             <div className="image-logo">

@@ -21,8 +21,10 @@ const App = () => {
 
   return (
     <>
-      {/* {showNavbar && <Navbar onLogout={handleLogout} />} */}
-      {location.pathname === "/" ? <Navbar /> : <Navbar />}
+      
+      {
+        location.pathname === "/" ? null : <Navbar />
+      }
 
       <Routes>
         <Route path="/" element={<Login />} />
