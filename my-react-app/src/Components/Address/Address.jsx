@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./Address.css";
+import {useSelector } from "react-redux";
 
-function Address({ mrp, discount, platformFee = 0, onSave }) {
+function Address({ onSave }) {
   const [form, setForm] = useState({
     name: "",
     mobile: "",
@@ -14,8 +15,22 @@ function Address({ mrp, discount, platformFee = 0, onSave }) {
     addressType: "Home",
     defaultAddress: false,
   });
+   const { cart, totalQuantity, totalPrice } = useSelector((state) => state.allCart);
 
-  const totalAmount = mrp - discount + platformFee;
+   const totalMRP = cart.reduce((total, item) => {
+        const originalPrice = Math.round(item.price / (1 - item.discount / 100));
+        return total + (originalPrice * item.quantity);
+    }, 0);
+    
+    // Calculate discount on MRP
+    const discountOnMRP = totalMRP - totalPrice;
+    
+    // Calculate platform fee (you can modify this logic as needed)
+    const platformFee = 0; // Currently FREE as per your design
+    
+    // Calculate final total amount
+    const totalAmount = totalPrice + platformFee;
+
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -201,12 +216,12 @@ function Address({ mrp, discount, platformFee = 0, onSave }) {
 
         <div className="price-row">
           <span>Total MRP</span>
-          <span>₹{mrp}</span>
+          <span>₹{totalMRP }</span>
         </div>
 
         <div className="price-row discount">
-          <span>Discount on MRP</span>
-          <span>- ₹{discount}</span>
+          <div> <span className="disc-1">Discount on MRP</span></div>
+          <div> <span>- ₹{discountOnMRP}</span></div>
         </div>
 
         <div className="price-row">
@@ -218,7 +233,7 @@ function Address({ mrp, discount, platformFee = 0, onSave }) {
 
         <div className="price-row total">
           <span>Total Amount</span>
-          <span>₹{totalAmount}</span>
+          <span>₹{totalPrice}</span>
         </div>
       </div>
     </div>
