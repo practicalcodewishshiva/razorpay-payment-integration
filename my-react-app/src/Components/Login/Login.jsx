@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 function Login() {
   const [num, setNum] = useState("")
+  const [checkBox, setCheckBox] = useState(false);
   const navigate = useNavigate();
 
 
@@ -15,15 +16,17 @@ function Login() {
   }
   function HandleButton() {
 
-    if (num==="6304441992") {
-      navigate("/MainPage");
+    if (num==="test" && checkBox===true) {
+      navigate("/Products");
     } else {
       alert("invalid number");
     }
 
   }
 
-
+function handleCheckBox(){
+setCheckBox(true)
+}
 
 
   return (
@@ -42,7 +45,7 @@ function Login() {
               <h3>Login <span id="or">Or</span> SignUp</h3>
               <input onChange={HandleChanging} value={num} id="input-num" type="tel" placeholder='Mobile Number' maxLength="10"></input>
               <div className="checkbox-container">
-                <input className="checkbox" type="checkbox"></input>
+                <input className="checkbox" type="checkbox" onClick={handleCheckBox}></input>
                 <div className="box">By continuing, I agree to the <a id="achor" href="#">Term of use</a>& <a id="achor" href="#">Privacy Policy</a>  and I am above 18 years old.</div>
               </div>
 
@@ -62,3 +65,15 @@ function Login() {
 }
 
 export default Login;
+
+
+// pseduo code 
+
+
+// login app
+
+// user test username type 
+
+// button check box.  primitives boolean value try=ue or false
+
+// login ------------ naviagte(mainpage or products)
