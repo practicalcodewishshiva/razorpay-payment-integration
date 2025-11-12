@@ -21,7 +21,8 @@ const products = [
       name: "Men Regular Fit Solid Spread Collar Casual Shirt",
       price: 1200,
       discount: 79,
-      images: [Adidas]
+      images: [Adidas],
+      quantity:1
     },
     {
       id: 2,
@@ -29,7 +30,8 @@ const products = [
       name: "Men's Purple Drop Shoulder Relaxed Fit Polo Neck T-Shirt",
       price: 923,
       discount: 63,
-      images: [BearHouse]
+      images: [BearHouse],
+      quantity:1
     },
     {
       id: 3,
@@ -37,7 +39,8 @@ const products = [
       name: "Solid Drop-Shoulder Sleeves Round Neck Oversized T-shirt",
       price: 593,
       discount: 67,
-      images: [Glitchez]
+      images: [Glitchez],
+      quantity:1,
     },
     {
       id: 4,
@@ -45,7 +48,8 @@ const products = [
       name: " Men Cotton Textured Long Sleeve Lounge Regular Fit T-Shirt",
       price: 499,
       discount: 20,
-      images: [Max]
+      images: [Max],
+      quantity:1,
     },
     {
       id: 5,
@@ -53,7 +57,8 @@ const products = [
       name: "Polo Collar Pure Cotton Slim Fit T-shirt",
       price: 1036,
       discount: 39,
-      images: [Allen_Solly]
+      images: [Allen_Solly],
+      quantity:1,
     },
     {
       id: 6,
@@ -61,7 +66,8 @@ const products = [
       name: "Men's Cotton Regular Fit Logo T-Shirt",
       price: 1124,
       discount: 30,
-      images: [Levis]
+      images: [Levis],
+      quantity:1,
     },
     {
       id: 7,
@@ -69,7 +75,8 @@ const products = [
       name: "Men's Cotton Regular Fit T-Shirt",
       price: 1448,
       discount: 37,
-      images: [Louis_Philippe]
+      images: [Louis_Philippe],
+      quantity:1,
     },
      {
       id: 8,
@@ -77,7 +84,8 @@ const products = [
       name: "Men's Cotton T-Shirt (DOCR016025, Blue)",
       price: 2550,
       discount: 40,
-      images: [Zara]
+      images: [Zara],
+      quantity:1,
     },
     {
       id: 9,
@@ -85,7 +93,8 @@ const products = [
       name: "Long Sleeve Tshirt",
       price: 255,
       discount: 70,
-      images: [Mast]
+      images: [Mast],
+      quantity:1,
     },
     {
       id: 10,
@@ -93,7 +102,8 @@ const products = [
       name: "Men's Cotton Printed Round Neck Tshirt",
       price: 300,
       discount: 75,
-      images: [Mack_Jonny]
+      images: [Mack_Jonny],
+      quantity:1,
     },
     {
       id: 11,
@@ -101,7 +111,8 @@ const products = [
       name: "Polo Collar Lounge Tshirts",
       price: 899,
       discount: 20,
-      images: [Lux_Cozi]
+      images: [Lux_Cozi],
+      quantity:1,
     },
     {
       id: 12,
@@ -109,7 +120,8 @@ const products = [
       name: "Men's PUMA All In Training Polo T-shirt in Ocean Tropic ",
       price: 1064,
       discount: 29,
-      images: [Puma]
+      images: [Puma],
+      quantity:1,
     },
     
   ];
