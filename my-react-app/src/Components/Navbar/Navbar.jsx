@@ -7,7 +7,7 @@ import "./Navbar.css";
 import useSelection from "antd/es/table/hooks/useSelection";
 import { useDispatch, useSelector } from "react-redux";
 
-const Navbar = ({ onLogout }) => {
+const Navbar = () => {
   const [activeDropdown, setActiveDropdown] = useState(false);
 
   const [open, setOpen] = useState(false);
@@ -107,7 +107,7 @@ const Navbar = ({ onLogout }) => {
             <Link to="/wishlist">Wishlist</Link>
           </div>
           <div className="action-item">
-            <Link to="/bag">Bag ({totalQuantity}) </Link>
+            <Link to="/checkOutPage">Bag ({totalQuantity}) </Link>
           </div>
         </div>
 

@@ -48,7 +48,7 @@ setCheckBox(true)
               </div>
 
               <div className='button'>
-                <button onClick={HandleButton}>CONTINUE</button>
+                <button onClick={HandleButton} style={{padding:'12px'}}>CONTINUE</button>
               </div>
             </div>
 

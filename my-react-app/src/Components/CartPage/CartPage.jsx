@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 import { addToCart } from "../../Redux/Slice/cartSlice";
 import { addToWishList } from "../../Redux/Slice/wishListSlice";
 
-function Card(){
+function CartPage(){
     const location = useLocation();
     const navigate = useNavigate();
 
@@ -72,7 +72,7 @@ function Card(){
     const handleGoToBag = () =>{
         console.log("aand");
         
-    navigate("/checkOut")
+    navigate("/checkOutPage")
     }
 
     
@@ -298,16 +298,7 @@ function Card(){
     );
 }
 
-export default Card;
+export default CartPage;
 
 
 
-// import React from 'react'
-
-// export default function CartPage() {
-
-//   const product = location.state?.product;
-//   return (
-//     <div>CartPage</div>
-//   )
-// }
