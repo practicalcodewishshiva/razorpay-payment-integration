@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import "./Address.css";
 import {useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
-function Address({ onSave }) {
+
+function Address({ onSave }){
+  const navigate = useNavigate()  
   const [form, setForm] = useState({
     name: "",
     mobile: "",
@@ -56,6 +59,7 @@ function Address({ onSave }) {
   };
 
   const handleSave = () => {
+    navigate("\payment")
     const requiredFields = [
       "name",
       "mobile",
@@ -66,6 +70,7 @@ function Address({ onSave }) {
       "city",
       "state",
     ];
+    
     for (const field of requiredFields) {
       if (!form[field]) {
         alert("Please fill all required fields.");
@@ -81,7 +86,6 @@ function Address({ onSave }) {
     const payload = {
       ...form,
       priceDetails: {
-        mrp,
         discount,
         platformFee,
         totalAmount,
