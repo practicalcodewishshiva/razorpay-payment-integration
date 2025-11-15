@@ -1,7 +1,4 @@
-*{
-    margin: 0px;
-    padding: 0px;
-}
+
 .Login-bar{
     border:solid 1px black;
     border: none;
@@ -59,7 +56,7 @@ h3{
 }
 button{
     width:320px;
-    padding:12px;
+    
     background-color: #93959e;
     color: #fff;
     border: none;

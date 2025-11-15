@@ -1,0 +1,216 @@
+/* ===== GLOBAL ===== */
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+
+/* ===== MAIN CONTAINER ===== */
+.address-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px 50px;
+    background-color: #fff;
+    gap: 40px;
+    padding-left: 30%;
+    width: 80%;
+
+}
+
+/* ===== LEFT FORM SECTION ===== */
+.form-section {
+    flex: 2;
+    background-color: #fff;
+    border-right: 1px solid #e0e0e0;
+
+    padding: 40px;
+    overflow-y: auto;
+    max-height: 90vh;
+    border: solid 1px rgb(171, 168, 168);
+
+}
+
+.section-title {
+    font-weight: 600;
+    font-size: 14px;
+    color: #222;
+    margin: 20px 0 10px;
+}
+
+.input {
+    width: 100%;
+    padding: 10px 14px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+    transition: border-color 0.2s ease;
+}
+
+.input:focus {
+    outline: none;
+    border-color: #ff3b5c;
+    box-shadow: 0 0 3px rgba(255, 59, 92, 0.3);
+}
+
+.note {
+    font-size: 12px;
+    color: #f5a623;
+    margin-top: -5px;
+    margin-bottom: 10px;
+}
+
+/* ===== ADDRESS ROWS ===== */
+.row {
+    display: flex;
+    gap: 15px;
+}
+
+.half {
+    flex: 1;
+}
+
+/* ===== RADIO GROUP ===== */
+.radio-group {
+    display: flex;
+    gap: 25px;
+    margin: 15px 0 25px;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.radio-text {
+    margin-left: 6px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* ===== CHECKBOX ===== */
+.checkbox-row {
+    margin-bottom: 25px;
+}
+
+.checkbox-text {
+    font-size: 14px;
+    color: #333;
+    margin-left: 6px;
+}
+
+/* ===== BUTTONS ===== */
+.button-row-1 {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    position: sticky;
+    bottom: 0;
+    background: #fff;
+    padding: 12px 0;
+    border-top: 1px solid #eee;
+}
+
+.btn-1 {
+    flex: 1;
+    padding: 14px ;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cancel-btn-1 {
+    background-color: #f6f6f6;
+    color: #333;
+    width: 50%;
+    border-radius: 2px;
+    margin: 5px;
+    height: 40px;
+}
+
+.cancel-btn-1:hover {
+    background-color: #e4e4e4;
+}
+
+.save-btn-1{
+    background-color: #ff3b5c;
+    color: #fff;
+    width: 50%;
+    border-radius: 2px;
+    margin: 5px;
+    height: 40px;
+}
+
+.save-btn-1:hover {
+    background-color: #e03552;
+}
+
+/* ===== RIGHT PRICE SECTION ===== */
+.price-section {
+    flex: 1;
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    
+}
+
+.price-section .section-title {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+    font-size: 14px;
+    color: #333;
+}
+.disc-1{
+    color: #333 ;
+}
+.price-row.discount {
+    color: #00a651;
+}
+
+.price-row.total {
+    font-weight: 700;
+    font-size: 15px;
+    margin-top: 12px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+
+@media (max-width: 900px) {
+    
+  .address-container {
+    flex-direction: column;
+    width: 350px;
+  }
+
+  .form-section {
+    border-right: none;
+    border-bottom: 1px solid #e0e0e0;
+    padding-right: 0;
+  }
+
+  .price-section {
+    width: 100%;
+    box-shadow: none;
+    padding: 15px 0;
+  }
+
+  .button-row {
+    flex-direction: column;
+  }
+}
