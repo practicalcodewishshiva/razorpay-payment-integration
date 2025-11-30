@@ -4,16 +4,16 @@ import Sidebar from "../Components/Sidebar/Sidebar";
 import products from "../Components/Products/productsData";
 import "../Components/Products/Products.css";
 
-const Men = () => {
+const GenZ = () => {
   const navigate = useNavigate();
   const [currentImageIndex, setCurrentImageIndex] = useState({});
   
-  // Filter products by Men category
-  const menProducts = products.filter(product => product.category === "Men");
+  // Filter products by GenZ category
+  const genZProducts = products.filter(product => product.category === "GenZ");
 
   useEffect(() => {
     const initialIndexes = {};
-    menProducts.forEach((product) => {
+    genZProducts.forEach((product) => {
       initialIndexes[product.id] = 0;
     });
     setCurrentImageIndex(initialIndexes);
@@ -32,11 +32,11 @@ const Men = () => {
         <div className="myntra-slider-container">
           <div style={{ padding: "20px" }}>
             <h2 style={{ marginBottom: "20px", fontSize: "24px", fontWeight: "bold" }}>
-              Men's Collection
+              GenZ Collection
             </h2>
           </div>
           <div className="products-grid">
-            {menProducts.map((product) => (
+            {genZProducts.map((product) => (
               <div key={product.id} className="product-card" onClick={() => navigateToCart(product)}>
                 <div className="product-image-container">
                   <div className="image-slider">
@@ -72,4 +72,5 @@ const Men = () => {
   );
 };
 
-export default Men;
+export default GenZ;
+

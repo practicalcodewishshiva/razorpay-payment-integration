@@ -26,7 +26,6 @@ const Products = () => {
   }
   return (
     <>
-       <Navbar />
       <div style={{ display: "flex" }}>
         <Sidebar />
         <div className="myntra-slider-container" >

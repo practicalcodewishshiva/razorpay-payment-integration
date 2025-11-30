@@ -38,7 +38,7 @@ const Categories = () => {
         <AccordionDetails className="!pt-0!">
           <ul>
             {categorieList.map((item) => (
-              <li className="list-none flex items-center gap-4 mb-[5px]">
+              <li key={item.id} className="list-none flex items-center gap-4 mb-[5px]">
                 <input
                   type="checkbox"
                   id={item.id}

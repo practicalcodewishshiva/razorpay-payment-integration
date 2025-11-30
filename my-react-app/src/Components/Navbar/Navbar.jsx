@@ -69,18 +69,18 @@ const Navbar = () => {
         <li className="nav-item" onMouseEnter={() => handleMouseEnter("kids")}>
           <Link to="/kids">Kids</Link>
         </li>
-         <li className="nav-item" onMouseEnter={() => handleMouseEnter("kids")}>
-          <Link to="/kids">Home</Link>
+         <li className="nav-item">
+          <Link to="/home">Home</Link>
         </li>
 
-         <li className="nav-item" onMouseEnter={() => handleMouseEnter("kids")}>
-          <Link to="/kids">Beauty</Link>
+         <li className="nav-item">
+          <Link to="/beauty">Beauty</Link>
         </li>
-         <li className="nav-item" onMouseEnter={() => handleMouseEnter("kids")}>
-          <Link to="/kids">Genz</Link>
+         <li className="nav-item">
+          <Link to="/genz">Genz</Link>
         </li>
-         <li className="nav-item" onMouseEnter={() => handleMouseEnter("kids")}>
-          <Link to="/kids">Studio</Link>
+         <li className="nav-item">
+          <Link to="/studio">Studio</Link>
         </li>
       </ul>
 

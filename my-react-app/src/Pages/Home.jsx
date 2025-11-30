@@ -1,26 +1,75 @@
-import React from 'react'
-import Sponsors from './Sponsors'
-import Sponsors_card from './Sponsors_card'
-import Prices_img from './Prices_img'
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import Sidebar from "../Components/Sidebar/Sidebar";
+import products from "../Components/Products/productsData";
+import "../Components/Products/Products.css";
 
 const Home = () => {
+  const navigate = useNavigate();
+  const [currentImageIndex, setCurrentImageIndex] = useState({});
+  
+  // Filter products by Home category
+  const homeProducts = products.filter(product => product.category === "Home");
+
+  useEffect(() => {
+    const initialIndexes = {};
+    homeProducts.forEach((product) => {
+      initialIndexes[product.id] = 0;
+    });
+    setCurrentImageIndex(initialIndexes);
+  }, []);
+
+  const navigateToCart = (product) => {
+    navigate('/cartPage', {
+      state: { product: product }
+    });
+  };
+
   return (
     <>
-    <div className="flex px-10 mt-2">
-      <img src="https://assets.myntassets.com/f_webp,w_490,c_limit,fl_progressive,dpr_2.0/assets/images/2025/OCTOBER/11/0eBLUDW2_3a1df837d6ec494cbc36242bdeded136.jpg" alt="" className="w-1/2"/>
-      <img src="https://assets.myntassets.com/f_webp,w_490,c_limit,fl_progressive,dpr_2.0/assets/images/2025/OCTOBER/11/XYhEeJkE_8723f25238b24c3f8869d8d8645400ef.jpg" alt="" className="w-1/2" />
-    </div>
-    <div>
-        <Sponsors />
-    </div>
-    <div>
-        <Sponsors_card />
-    </div>
-    {/* <div>
-    <Prices_img />
-    </div> */}
-</>
-  )
-}
+      <div style={{ display: "flex" }}>
+        <Sidebar />
+        <div className="myntra-slider-container">
+          <div style={{ padding: "20px" }}>
+            <h2 style={{ marginBottom: "20px", fontSize: "24px", fontWeight: "bold" }}>
+              Home & Living Collection
+            </h2>
+          </div>
+          <div className="products-grid">
+            {homeProducts.map((product) => (
+              <div key={product.id} className="product-card" onClick={() => navigateToCart(product)}>
+                <div className="product-image-container">
+                  <div className="image-slider">
+                    {product.images.map((image, index) => (
+                      <img
+                        key={index}
+                        src={image}
+                        alt={`${product.name} - View ${index + 1}`}
+                        className={`product-image ${
+                          currentImageIndex[product.id] === index ? "active" : ""
+                        }`}
+                      />
+                    ))}
+                  </div>
+                </div>
+                <div className="product-details">
+                  <div className="brand-name">{product.brand}</div>
+                  <div className="product-name">{product.name}</div>
+                  <div className="price-container">
+                    <span className="current-price">₹{product.price}</span>
+                    <span className="original-price">
+                      ₹{Math.round(product.price / (1 - product.discount / 100))}
+                    </span>
+                    <span className="discount">{product.discount}% off</span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
 
-export default Home
+export default Home;
