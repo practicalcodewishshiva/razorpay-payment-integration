@@ -17,19 +17,15 @@ const CheckOutPage = () => {
     (state) => state.allCart
   );
 
-  // Calculate total MRP (original price before discount)
   const totalMRP = cart.reduce((total, item) => {
     const originalPrice = Math.round(item.price / (1 - item.discount / 100));
     return total + originalPrice * item.quantity;
   }, 0);
 
-  // Calculate discount on MRP
   const discountOnMRP = totalMRP - totalPrice;
 
-  // Calculate platform fee (you can modify this logic as needed)
-  const platformFee = 0; // Currently FREE as per your design
+  const platformFee = 0; 
 
-  // Calculate final total amount
   const totalAmount = totalPrice + platformFee;
 
   useEffect(() => {
@@ -38,20 +34,17 @@ const CheckOutPage = () => {
 
   function razorPayOrder() {
     console.log("hello clicked");
-    navigate("/razorpay");
+    navigate("/payment");
   }
 
   return (
     <div className="cart-container">
-      {/* ===== LEFT SECTION ===== */}
       <div className="cart-left">
-        {/* Check Delivery Section */}
         <div className="delivery-check">
           <p>Check delivery time & services</p>
           <button className="btn-outline">ENTER PIN CODE</button>
         </div>
 
-        {/* Offers Section */}
         <div className="offers-box">
           <h4>Available Offers</h4>
           <p>

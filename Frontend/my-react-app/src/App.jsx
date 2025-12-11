@@ -11,7 +11,7 @@ import CartPage from "./Components/CartPage/CartPage";
 import Payments from "./Pages/Payments";
 import CheckOutPage from "./Components/CheckOutPage/CheckOutPage";
 import Address from "./Components/Address/Address";
-import RazorPayPaymentIntegration from "./Components/RazorPayPaymentIntegration/RazorPayPaymentIntegration";
+import PaymentPage from "./Components/PaymentPage/PaymentPage";
 import Home from "./Pages/Home";
 import Beauty from "./Pages/Beauty";
 import GenZ from "./Pages/GenZ";
@@ -29,9 +29,6 @@ const App = () => {
 
   return (
     <>
-      {/* {showNavbar && <Navbar onLogout={handleLogout} />} */}
-      {/* {location.pathname === "/" ? <Navbar /> : <Navbar />} */}
-
       {location.pathname === "/" ? null : <Navbar />}
 
       <Routes>
@@ -52,7 +49,7 @@ const App = () => {
         <Route path="/payments" element={<Payments />} />
         <Route path="/checkOutPage" element={<CheckOutPage />} />
         <Route path="/address" element={<Address />} />
-        <Route path="/razorpay" element={<RazorPayPaymentIntegration />} />
+        <Route path="/payment" element={<PaymentPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>
